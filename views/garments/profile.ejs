@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garment Profile</title>
+  </head>
+  <body>
+    <h1>Information Garment</h1>
+    <ul>
+      <h3>Profile Garment</h3>
+      <li><%= garments.name %></li>
+      <li><%= garments.location %></li>
+      <li><%= garments.contact %></li>
+    </ul>
+    <ul>
+      <h3>List Products</h3>
+      <% for (const product of garments.products) { %>
+      <li>
+        <%= product.name %><a
+          href="/garments/<%= garments.name%>/<%= product.id %>"
+          >Edit</a
+        >
+      </li>
+
+      <% } %>
+    </ul>
+    <a href="/garments/<%= garments.id %>/products">Add Products</a><br />
+    <a href="/garments">List</a>
+  </body>
+</html>

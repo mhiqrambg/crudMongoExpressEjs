@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Garments List</title>
+  </head>
+  <body>
+    <h1>Garments List</h1>
+    <h2><a href="/garments/add">Add</a></h2>
+    <ul>
+      <% garments.forEach(function(garment) { %>
+      <form method="POST" action="/garments/<%= garment._id %>?_method=DELETE">
+        <tr>
+          <%= garment.name %> | <%= garment.location %>
+          <td>
+            <a href="/garments/<%= garment._id %>">View</a>
+            <button type="submit">Delete</button>
+          </td>
+        </tr>
+      </form>
+      <% }); %>
+    </ul>
+  </body>
+</html>

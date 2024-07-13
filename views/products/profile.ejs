@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garment Profile</title>
+  </head>
+  <body>
+    <h1>Information Product</h1>
+    <ul>
+      <h3>Profile Product</h3>
+      <ul>
+        <li><%= product.name %></li>
+        <li><%= product.qty %></li>
+      </ul>
+    </ul>
+    <ul>
+      <h3>Garment Products</h3>
+      <ul>
+        <li><%= product.garment[0].name %></li>
+      </ul>
+    </ul>
+    <a href="/garments/<%= product.garment[0].id %>">View</a>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Product</title>
+  </head>
+  <body>
+    <h1>Create Product</h1>
+    <form action="/garments/<%= gar_id %>/products" method="POST">
+      <label for="name">Nama Barang</label>
+      <input type="text" name="name" />
+      <label for="qty">Jumlah</label>
+      <input type="text" name="qty" />
+      <button type="submit">Submit</button>
+    </form>
+    <br /><br />
+    <a href="/garments">List Products</a>
+  </body>
+</html>
